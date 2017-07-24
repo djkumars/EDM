@@ -7,9 +7,15 @@ import {DashboardComponent} from './dashboard/dashboard/dashboard.component';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
 
 import { GridModule } from '@progress/kendo-angular-grid';
+//import {} from '@progress/kendo-angular-'
 import { LayoutModule } from '@progress/kendo-angular-layout';
 
+//import { Ng2MenuModule } from 'ng2-Menu';
+//import { MasterComponent } from './dashboard/master/master.component';
+//import { ChildComponent } from './dashboard/child/child.component';
+
 const appRoutes: Routes = [
+//{ path: '/',component: AppComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
@@ -19,13 +25,16 @@ const appRoutes: Routes = [
     BrowserModule,
     GridModule,
      LayoutModule,
+     //Ng2MenuModule,
     RouterModule.forRoot(
       appRoutes,
       {enableTracing:true}
     )
   ],
   declarations: [
-    AppComponent, DashboardComponent, PagenotfoundComponent
+    AppComponent, DashboardComponent, PagenotfoundComponent, 
+    
+    //MasterComponent, ChildComponent
   ],
   
   providers: [],

@@ -7,6 +7,38 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--<link rel="stylesheet" href="https://unpkg.com/ng2-menu/dist/ng2-menu.css" />-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+            body {
+                padding-top: 50px;
+            }
+            .navbar-template {
+                padding: 40px 15px;
+            }
+@media (min-width: 767px) {
+    .navbar-nav .dropdown-menu .caret {
+	transform: rotate(-90deg);
+    }
+}
+        </style>
+  <script>
+    $(document).ready(function() {
+    $('.navbar a.dropdown-toggle').on('click', function(e) {
+        var $el = $(this);
+        var $parent = $(this).offsetParent(".dropdown-menu");
+        $(this).parent("li").toggleClass('open');
+
+        if(!$parent.parent().hasClass('nav')) {
+            $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+        }
+
+        $('.nav li.open').not($(this).parents("li")).removeClass("open");
+
+        return false;
+    });
+});
+    </script>
 </head>
 <body>
   <app-root></app-root>
