@@ -1,7 +1,7 @@
-<p>
+<p class="Col-md-12">
   dashboard works!
   
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!--<div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -104,9 +104,9 @@
           </li>
         </ul>
       </div>
-      <!--/.nav-collapse -->
+     
     </div>
-  </div>
+  </div>-->
 
 
   <kendo-grid [height]="410" [data]="gridView" [pageSize]="pageSize" [skip]="skip" [pageable]="{
@@ -137,7 +137,11 @@
 
 
   </kendo-grid>
+  <!--<app-confirm [style.visibility]="show"></app-confirm>-->
 
+
+  <button #anchor (click)="onToggle()" class="k-button">{{toggleText}} Popup</button>
+</p>
   <!--<ul ng2-menu>
      <li> Menu Item 1 </li>
      <li> Menu Item 2

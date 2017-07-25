@@ -3,7 +3,8 @@ import { sampleProducts } from './product';
 //import { GridModule } from '@progress/kendo-angular-grid';
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
-
+//import { ConfirmComponent } from '../../../shared/component/confirm/confirm.component';
+    
  //import { Ng2MenuModule } from 'ng2-Menu';
 @Component({
   selector: 'app-dashboard',
@@ -21,6 +22,8 @@ export class DashboardComponent implements OnInit {
     public multiple: boolean = false;
     public allowUnsort: boolean = true;
     private sort: SortDescriptor[] = [];
+
+//constructor(private confirmDialogue : ConfirmComponent) { this.loadItems();
 
   constructor() { this.loadItems();
 }
@@ -56,6 +59,20 @@ private loadItems(): void {
 
     public sliderChange(pageIndex: number): void {
         this.skip = (pageIndex - 1) * this.pageSize;
+    }
+
+
+
+
+    private toggleText: string = "Show";
+    private show: boolean = false;
+
+    public onToggle(): void {
+
+        //toggoleShowHide:string ="visible"; 
+        this.show = !this.show;
+ 
+        //this.toggleText = this.show ? "Hide" : "Show";
     }
 
   ngOnInit() {
