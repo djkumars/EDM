@@ -13,12 +13,14 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { MenuComponent } from './shared/component/menu/menu.component';
+import { FormComponent } from './form/form.component';
 //import { ConfirmComponent } from './shared/component/confirm/confirm.component';
 
 
 const appRoutes: Routes = [
 //{ path: '/',component: AppComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'form', component: FormComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
  
@@ -37,7 +39,7 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent, DashboardComponent, PagenotfoundComponent, 
-    MenuComponent, 
+    MenuComponent, FormComponent, 
     //ConfirmComponent, 
   ],
   
