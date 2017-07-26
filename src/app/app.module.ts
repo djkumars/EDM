@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {} from 'BrowserAnimationsModule';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }          from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import {DashboardComponent} from './dashboard/component/dashboard/dashboard.component';
 import { PagenotfoundComponent } from './shared/component/pagenotfound/pagenotfound.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { GridModule } from '@progress/kendo-angular-grid';
 
